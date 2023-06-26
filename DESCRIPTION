@@ -2,9 +2,8 @@ Package: pcswizaRd
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Anni Tave", "Overlander", , "overland@uni-bremen.de", role = c("aut", "cre"))
+Description: The pcs-wizard lets you implement a basic version of a parallel constriant satisfaction PCS model and visualize your model's activation process. She is still a work in progress, as the wizard's magic will truly unfold when my thesis has been written on which she is based.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
