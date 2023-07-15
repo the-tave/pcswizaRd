@@ -1,3 +1,21 @@
+#' PCS calculation
+#'
+#' This function takes a correlation matrix (as data frame!) as input and returns the values of a PCS model.
+#' In an iterative process, nodes are either activated or inhibited to represent a mental model.
+#'
+#' @param corr Dataframe of a correlation matrix
+#' @param t Maximum number of iterations, standard 100
+#' @param d Decay parameter, standard .05
+#' @param min Minimum activation, standard 0
+#' @param max Maximum activation, standard 1
+#' @param in_act Initial activation, standard .1
+#'
+#' @return Returns activation of each node each iteration in dataframe with the timepoint.
+#' @export
+#'
+#' @examples
+#' pcs_equation(data.frame(X = c(1, .8, .2), Y = c(.8, 1, -.5), Z = c(.2, -.5, 1)))
+#'
 pcs_equation <- function(corr, t = 100, d = .05, min = 0, max = 1, in_act = .1){
   # corr must be a data frame containing a correlation matrix
   n_factors <- length(corr)
