@@ -27,7 +27,7 @@ pcs_viz <- function(pcsresult){
                    "#4e3cee", "#3cee79", "#27994e")
 
   vplotty <- pcsresult |>
-    reshape2::melt() |> # "reshape2:: " technically not necessary, but "melt"
+    reshape2::melt(id.vars=NULL) |> # "reshape2:: " technically not necessary, but "melt"
     # is not exclusive to that pacakge, so specification is useful
     dplyr::filter(variable != "timestep") |>
     dplyr::mutate(iteration = rep(1:max(pcsresult$timestep), (dim(pcsresult)[2]-1)),
