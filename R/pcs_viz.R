@@ -1,3 +1,16 @@
+#' PCS Visualization
+#'
+#' This function takes a dataframe of PCS activations over a number of iterations as input and
+#' returns a plot of active nodes in a green-blue color and inactive nodes in a red-pink color.
+#'
+#' @param pcsresult Dataframe of activation as produced in the function _pcs_equation_.
+#'
+#' @return Returns a line plot showing the activation progress of the input nodes.
+#' @export
+#'
+#' @examples
+#' pcs_viz(pcs_equation(data.frame(X = c(1, .8, .2), Y = c(.8, 1, -.5), Z = c(.2, -.5, 1))))
+#'
 pcs_viz <- function(pcsresult){
 
   neg_palette <- c("red", "magenta", "darkred",
