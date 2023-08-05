@@ -48,6 +48,6 @@ pcs_viz <- function(pcsresult){
     papaja::theme_apa() +
     labs(x = "Iteration", y = "Activation",
          title = "PCS Model Results",
-         color = "Factors") +
+         color = "Nodes") +
     scale_x_continuous(limits = c(1, max(pcsresult$timestep)))
 }
